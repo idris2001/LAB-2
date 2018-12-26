@@ -1,71 +1,101 @@
 <!DOCTYPE html>
-<HTML-код Ланг="Ан">
-<глава>
- <мета кодировка="УТФ-8">
- <мета имя="область просмотра" содержимого="ширина=устройство-ширина, начально-масштаб=1.0">
- <мета НТТР-экв="х-УА-совместимый" содержание="т. е.=кра">
- <название>документ</название>
-</глава>
-<тело>
- <скрипт>
- ПЕРЕМЕННЫЕ
- Задача1
-ВАР имя = "Брендан"
-ВАР имя = "Эйхом"
-ВАР имя = "имя" + "фамилия"
-консоль.журнала (полное имя)
-var firstName = "Брендан "
-var lastName = "Эйхом"
-var fullName = firstName + lastName
-console.log (fullName)
-var firstName = "Брендан "
-var lastName = "Эйхом"
-var fullName = firstName + lastName
-alert (fullName)
-   Задача2
-var a = "Программирование"
-console.log (a)
-   Задача3
-var name
-var admin
-admin = "Андрей"
-name = admin
-console.log (admin)
-   Задача4
-var A
-var B
-var C
-A = "1000"
-B = "5"
-C = A
-A = B
-B = C
-console.log (A)
-консоль.журнал (Б)
-ТИПЫ ДАННЫХ
-Задача1
-консоль.журнал (12e4)
-консоль.журнал (0е-5)
-консоль.журнал (123e подъема-3)
-консоль.журнал (0xc8)
-консоль.журнал (0xfa)
-Задача2
-Математика.asin (3) - Метод возвращает арксинус числа
-Математика.atan (1) - Возвращает числовое значение из промежутка от -pi/2 до pi/2
-Математика.atan2 (-1,1) - Метод atan2 возвращает числовое значение между -PI и PI, представляющее собой угол Theta для точки (x,y)
-Математика.ехр (13) - Метод математика.exp(x) возвращает ex, где e=2.71827
-Математика.min (5, 675, 45, 973) - Метод нахождения наименьшей переменнной
-Математика.random () - Метод помогает найти случайное число от 0 до 1
-Математика.sqrt (9) - Метод помогает вычислить квадратный корень
-Математика.log (6) - Возвращает натуральный (по основанию E) логарифм числа
-Математика.roud (793,36) - Метод округляет число до ближайшего целого числа
-Математика.floor (69) - Возвращает наибольшее целое, меньшее или равное аргументу
-Математика.ceil (39) - Возвращает наименьшее целое, большее или равное аргументу
-Математика.sin (30) - Возвращает значение из интервала от -1 до 1, которое является синусом аргумента.
-Математика.cos (60) - Возвращает значение из интервала от -1 до 1, которое является косинусом аргумента.
-Математика.tan (90) - Возвращает численное значение для тангенса угла в радианах.
-Математика.pow (4,2) - Метод позволяет возвести число в степень экспонента
-Математика.abs(5) - Метод возвращает абсолютное значение числа
-  </скрипт>
-</тело>
-</HTML-код>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //5
+    var arr =[]
+    var s=0
+    for (a=0; a<=4; a++ ){
+      arr[a] = +prompt("введи число", "")
+      s = s + arr[a]
+      console.log(arr[a])
+    }
+     console.log("Сумма чисел", s)
+     //6
+     var P=1, A=[],i, S= +prompt("введите число=","")
+      for (i=0;i<S;i++){
+      A[i]=Math.floor(Math.random()*100)
+}
+      console.log(A);
+      for (i=0;i<A.length;i++){
+      P = P * A[i]
+}
+      console.log(P);
+      //7
+    var arr=[],sum=0,cnt=0
+    for(i=0;i<5;i++){
+    arr[i]=prompt("введите arr["+i+"]=")
+    console.log("arr["+i+"]=" + arr[i]);
+}
+    for(i=0;i<arr.length;i++)
+   if(arr[i]<0){
+     sum+=+arr[i]
+     cnt++
+   }
+console.log(sum/cnt);
+   
+//8
+var A=[], B = [], C=0
+var key = +prompt("введите искомое значение", "")
+for(i=0;i<5;i++){
+A[i]=Math.floor(Math.random()*10)
+}
+for(i=0;i<A.length;i++){
+if(A[i] == key){
+ B[C] = i
+ C++
+}
+}
+if (B.length==0)console.log("Искомого значения нет");
+else {
+  console.log("Индексы совпадают" + B);
+ }
+ //9
+ var A=[]
+var B=[], C=[]
+for (i=0;i<5;i++){
+  A[i]=+prompt("введите A[" + i + "]=")
+}
+for(i=0;i<A.length;i++)
+if(A[i]>0) B.push(A[i])
+else {
+  if (A[i]<0) C.push(A[i])
+}
+console.log("положительные числа: " + B);
+console.log("отрицательные числа: " + C)
+//10
+var A=[]
+var B=[], C=[]
+for(i=0;i<5;i++){
+   A[i]=Math.floor(Math.random()*10)
+   B[i]=+prompt("введите B["+i+"]=")
+   C.push(A[i]+B[i])}
+console.log(A);
+console.log(B);
+console.log(C);
+//11
+var A = []
+var leastnum= 0, greatnum = 0
+var B = +prompt("введите значение длины массива=","")
+for (i=0;i<B;i++){
+   A[i]=Math.floor(Math.random()*10-5)}
+for (i=0;i<5;i++){
+  if(A[i]>0&A[i]>greatnum)
+  greatnum= A[i]
+  else {
+    if(A[i]<0&A[i]<leastnum)
+    leastnum= A[i]
+  }
+}
+console.log(A);
+console.log("наим число " + leastnum);
+console.log("наиб число " + greatnum);
+  </script>
+</body>
+</html>
